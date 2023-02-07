@@ -4,7 +4,7 @@ const encourageMyself = (name: string) => {
 
 encourageMyself('Sean');
 
-encourageMyself(88);
+// encourageMyself(88);
 
 
 // function square(num) {
@@ -29,15 +29,15 @@ function greet2(person: string) {
 }
 
 greet2('Sam');
-greet2(22);
-greet2(false)
+// greet2(22);
+// greet2(false)
 
 
 const doSomething = (person: string, age: number, isFunny: boolean) => {
 
 }
 
-doSomething("Sean", 29, false);
+doSomething(29, 29, false);
 
 
 // default parameters
@@ -47,7 +47,7 @@ function greetThird(person: string = "Sean Daniel") {
 }
 
 greetThird('Bo Bichette');
-greetThird(false)
+// greetThird(false)
 
 
 // function return types
@@ -92,6 +92,11 @@ function printTwice(msg: string) {
   console.log(msg);
 }
 
+function printTwice2(msg: string) {
+  console.log(msg);
+  return '';
+}
+
 function secondsInDay() {
   return 24 * 60 * 60;
 };
@@ -110,3 +115,32 @@ function gameLoop(): never {
   }
 }
 
+
+const twoFer = (name: string = 'you'): string => {
+  return `one for ${name}, one for me`;
+}
+
+
+console.log(twoFer());
+console.log(twoFer('Sean Daniel'));
+
+
+
+const isLeapYear = (year: number): boolean => {
+
+    return (year % 4 === 0); 
+}
+
+console.log(isLeapYear(2012));
+console.log(isLeapYear(2013));
+
+
+function makeError2(msg: string): never {
+  throw new Error(msg);
+}
+
+function gameLoop2(): never {
+  while (true) {
+    console.log("Game Loop Running");
+  }
+}
