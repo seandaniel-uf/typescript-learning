@@ -81,3 +81,5 @@ coords.push({x: 23, y: "8"});
 
 // multidimensional arrays
 const board: string[][] = [["X", "O", "X"], ["X", "O", "X"], ["X", "O", "X"]];
+
+const demo: number[][][] = [[[1]]]
