@@ -37,7 +37,6 @@ const cats: Movie = {
 };
 
 const getProfit = (movie: Movie): number => {
-  const gross
   return movie.boxOffice.grossWorldwide - movie.boxOffice.budget;
 }
 

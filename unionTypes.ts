@@ -57,3 +57,46 @@ console.log(calculateTax('$33.02', .33));
 // a floating point number is a decimal 1.023
 //parseInt returns a whole number
 //parseFloat returns a decimal
+
+const nums: number[] = [1, 2, 3, 4, 5];
+
+// all types with any
+const stuff: any[] = [1, 2, 4, false, {}];
+
+// multiple types but not all
+const stuff2: (number | string | boolean)[] = [1, 2, 'string', false];
+
+
+type Point2 = {
+  x: number;
+  y: number;
+}
+
+type Loc2 = {
+  lat: number;
+  long: number;
+}
+
+const coords: (Point2 | Loc2)[] = [{x: 1, y: 2}, {lat: 2, long: 3}];
+
+
+// literal types, doesn't go by its type but literal valie
+
+const zero: 0 = 0;
+const hi: "hi" = "hi";
+
+const giveAnswer = (answer: 'yes' | 'no' | 'maybe') => {
+  console.log(answer);
+}
+
+giveAnswer('what');
+giveAnswer('yes');
+
+let mood: "Happy" | "Sad" = "Happy";
+mood = "Sad";
+mood = "Angry";
+
+// literal types - has to be THESE Strings
+type DayOfWeek = "Monday" | "Tuesday" | "Wednesday" | "Thursday" | "Friday";
+
+let today: DayOfWeek = "Monday";
