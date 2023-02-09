@@ -127,3 +127,29 @@ const seanDaniel: Engineer = {
   level: "junior",
   languages: ["JavaScript", "React"],
 };
+
+// Types vs Interfaces
+// interfaces can only describe an object
+type Color = "Red" | "Blue";
+// interface Color = "Red" | Blue - won't work, has to be an object
+
+// interfaces can reopen and add on
+interface Chicken {
+  breed: string;
+}
+interface Chicken {
+  numEggs: number;
+}
+
+// interfaces can extend
+interface blueJaysPlayers {
+  nameBlueJay: string;
+}
+interface leafsPlayers extends blueJaysPlayers {
+  nameLeaf: string;
+}
+
+const torontoPlayer: leafsPlayers = {
+  nameBlueJay: "Bo Bichette",
+  nameLeaf: "Nazem Kadri",
+};
